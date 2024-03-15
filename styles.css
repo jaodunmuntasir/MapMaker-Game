@@ -1,0 +1,284 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* or column, depending on your layout */
+    height: 100%;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the game board horizontally */
+    align-items: center; /* Center the game board vertically */
+    overflow: auto; /* Or 'hidden' if you don't want scrolling within sections */
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto; /* Or 'hidden' if you don't want scrolling within sections */
+}
+
+.top-section {
+    flex: 1;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.bottom-section {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+#clock-icon {
+    position: absolute;
+    top: 10px;    /* Adjust as necessary */
+    right: 10px;  /* Adjust as necessary */
+    font-size: 20px; /* Adjust if using FontAwesome */
+}
+
+.box {
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc; /* Border for the box */
+    box-sizing: border-box;
+    font-family: 'Comfortaa'; /* Change font family */
+    font-size: 26px; /* Change font size */
+    color: black; /* Change text color */
+    font-weight: bold; /* Make text bold */
+}
+
+.box1 { background-color: rgba(255, 0, 0, 0.7); } /* Red with 50% opacity */
+.box2 { background-color: rgba(0, 255, 0, 0.7); } /* Green with 50% opacity */
+.box3 { background-color: rgba(0, 0, 255, 0.7); } /* Blue with 50% opacity */
+.box4 { background-color: rgba(255, 255, 0, 0.7); } /* Yellow with 50% opacity */
+
+#game-board {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(11, 50px);
+    grid-template-rows: repeat(11, 50px);
+    gap: 2px;
+    margin: auto;
+    justify-content: center;
+}
+
+#game-board > div {
+    /* Existing styles for grid cells */
+    border: 1px solid white; /* Black cell borders */
+    background-image: url('D:\\Programming Language Software Library\\JavaScript Files\\Assignment1_v2\\assignment_assets\\assets\\tiles\\base.png'); /* Path to your game board background image */
+    background-size: cover; /* Cover the entire grid area */
+    background-position: center; /* Center the background image */
+}
+
+#supply-box {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+    gap: 2px;
+    margin: auto;
+    justify-content: center;
+    background-color: white;
+}
+
+#supply-box > div {
+    /* Existing styles for grid cells */
+    border: 1px solid white; /* Black cell borders */
+}
+
+.grid > div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.supply-and-controls {
+    display: flex;
+    align-items: center; /* Align vertically */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    margin-right: 20px; /* Space between buttons and supply box */
+}
+
+.final-score-container {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 0px; /* Add some space above the final score display */
+    font-family: 'Comfortaa'; /* Change font family */
+    font-size: 30px; /* Change font size */
+    color: black; /* Change text color */
+    font-weight: bold; /* Make text bold */
+}
+
+.score-container {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 0px; /* Add some space above the final score display */
+    font-family: 'Comfortaa'; /* Change font family */
+    font-size: 6px; /* Change font size */
+    color: black; /* Change text color */
+    /* font-weight: bold; Make text bold */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unit-container {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 0px; /* Add some space above the final score display */
+    font-family: 'Comfortaa'; /* Change font family */
+    font-size: 15px; /* Change font size */
+    color: black; /* Change text color */
+    /* font-weight: bold; Make text bold */
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.middle-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.mission {
+    width: 45%; /* Adjust the width as needed */
+    margin: 10px;
+    position: relative; /* Needed to position the indicator correctly */
+    box-shadow: 0px 0px 5px #aaa; /* A subtle shadow for each mission */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.mission img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+/* Style for an active mission */
+.mission.active::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 15px; /* Size of the circle */
+    height: 15px; /* Size of the circle */
+    background-color: #4CAF50; /* Bright green color */
+    border-radius: 50%; /* Makes it a circle */
+    box-shadow: 0px 0px 5px #4CAF50; /* Optional: Adds a glow effect */
+}
+
+.mission-score {
+    position: absolute;
+    bottom: 10px;
+    left: 60%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: white;
+    /* Additional styling as needed */
+}
+
+/* Specific styles for each element */
+.forest { background: green; }
+.village { background: brown; }
+.plains { background: yellow; }
+.water { background: blue; }
+.mountain { background: grey; }
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;  /* Adjust for desired roundness */
+    width: 100px;        /* Set the width of the buttons */
+    height: 40px;        /* Set the height of the buttons */
+    background-color: white; /* Example background color */
+    color: black;        /* Text color */
+    border: none;        /* Remove default border */
+    outline: none;       /* Remove outline on focus */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-family: 'Comfortaa'; /* Change font family */
+    font-size: 16px; /* Change font size */
+    color: black; /* Change text color */
+    font-weight: bold; /* Make text bold */
+}
+
+button:hover {
+    background-color: #FFFDD0; /* Darker shade for hover effect */
+}
+
+#current-season {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#seasonal-scores {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#seasonal-scores div {
+    margin: 5px 0;
+}
+
+.background-image {
+    position: fixed; /* Fixed position to cover the whole screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('D:\\Programming Language Software Library\\JavaScript Files\\Assignment1_v2\\assignment_assets\\assets\\tiles\\theme.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    opacity: 0.4; /* Adjust the transparency; 1 is fully opaque, 0 is fully transparent */
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+#shape-time-cost {
+    display: flex;
+    align-items: center;
+    /* Adjust the position as needed */
+    position: absolute;
+    top: 10px; /* Adjust based on your layout */
+    right: 10px; /* Adjust based on your layout */
+}
+
+#shape-time-cost img {
+    width: 20px; /* Adjust size as needed */
+    margin-right: 5px;
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Mapmaker</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="left-section">
+            <div id="game-board" class="grid"></div>
+        </div>
+        <div class="right-section">
+            <div class="top-section">
+                <div class="box box1">
+                    <h3>Spring</h3>
+                    <p id="spring-score">0 points</p>
+                </div>
+                <div class="box box2">
+                    <h3>Summer</h3>
+                    <p id="summer-score">0 points</p>
+                </div>
+                <div class="box box3">
+                    <h3>Autumn</h3>
+                    <p id="autumn-score">0 points</p>
+                </div>
+                <div class="box box4">
+                    <h3>Winter</h3>
+                    <p id="winter-score">0 points</p>
+                </div>
+            </div>            
+
+            <div class="top-section">
+                <div class="final-score-container">
+                    <div id="final-score-display">Final Score: 0</div>
+                    <div class="unit-container">
+                    <div id="time-unit-display">Time Units: 0</div>
+                    <div id="current-season">(Spring)</div>
+                    </div>
+                    <div class="score-container">
+                        <div id="extra-missions-score">Extra Missions Score: 0</div>
+                        <div id="score-mission-1">Mission 1 Score: 0</div>
+                        <div id="score-mission-2">Mission 2 Score: 0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="middle-section">
+                <div class="mission" id="Edge_of_the_forest">
+                    <img src="D:\\Programming Language Software Library\\JavaScript Files\\Assignment1_v2\\assignment_assets\\assets\\tiles\\Edge_of_the_forest.png" alt="Mission 1">
+                    <span class="mission-score" id="score-Edge_of_the_forest">0 points</span>
+                </div>
+                <div class="mission" id="Sleepy_valley">
+                    <img src="D:\\Programming Language Software Library\\JavaScript Files\\Assignment1_v2\\assignment_assets\\assets\\tiles\\Sleepy_valley.png" alt="Mission 2">
+                    <span class="mission-score" id="score-Sleepy_valley">0 points</span>
+                </div>
+                <div class="mission" id="Watering_potatoes">
+                    <img src="D:\\Programming Language Software Library\\JavaScript Files\\Assignment1_v2\\assignment_assets\\assets\\tiles\\Watering_potatoes.png" alt="Mission 3">
+                    <span class="mission-score" id="score-Watering_potatoes">0 points</span>
+                </div>
+                <div class="mission" id="Borderlands">
+                    <img src="D:\\Programming Language Software Library\\JavaScript Files\\Assignment1_v2\\assignment_assets\\assets\\tiles\\Borderlands.png" alt="Mission 4">
+                    <span class="mission-score" id="score-Borderlands">0 points</span>
+                </div>
+            </div>
+            <div class = "bottom-section">
+                <!-- <div id="controls"> -->
+                    <div class="supply-and-controls">
+                    <div class="buttons">
+                        <button id="rotate-button">Rotate</button>
+                        <button id="flip-button">Flip</button>
+                    </div>
+                    <div id="supply-box" class="grid">
+                        <!-- <div id="shape-time-cost">0</div> -->
+                            <!-- <i class="fa fa-clock-o" aria-hidden="true" id="clock-icon"></i> -->
+                            <!-- <span id="shape-time-cost">0</span> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

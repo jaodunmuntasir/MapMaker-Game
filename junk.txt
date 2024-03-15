@@ -1,0 +1,10 @@
+            <!-- <div id="controls">
+                <div id="time-unit-display">Time Units: 0</div>
+                <div id="current-season">Current Season: Spring</div>
+                <div id="seasonal-scores">
+                    <div id="score-mission-1">Mission 1 Score: 0</div>
+                    <div id="score-mission-2">Mission 2 Score: 0</div>
+                   <div id="extra-missions-score">Extra Missions Score: 0</div> </div> -->
+                
+                <!-- Added elements for displaying the current season score and the final score  -->
+                <!-- <div id="score-display">Score for Current Season: 0</div> -->
